@@ -5,10 +5,10 @@
 package easyweb
 
 import (
-	"net/http"
+	"bufio"
 	"io"
 	"net"
-	"bufio"
+	"net/http"
 )
 
 const (

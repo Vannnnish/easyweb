@@ -5,13 +5,13 @@
 package middleware
 
 import (
+	"fmt"
+	"github.com/mattn/go-isatty"
 	"gitlab.yeeyuntech.com/yee/easyweb"
 	"io"
-	"github.com/mattn/go-isatty"
 	"os"
-	"time"
-	"fmt"
 	"strings"
+	"time"
 )
 
 // ascii码表

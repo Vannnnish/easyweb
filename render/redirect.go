@@ -5,8 +5,8 @@
 package render
 
 import (
-	"net/http"
 	"fmt"
+	"net/http"
 )
 
 type Redirect struct {

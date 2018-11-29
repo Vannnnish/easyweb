@@ -356,7 +356,7 @@ func (c *Context) AesMustGetIntWithError(param string, errStr string) int {
 	return int(i)
 }
 
-func (c *Context) AesGetString(param string, defaultStr ... string) string {
+func (c *Context) AesGetString(param string, defaultStr ...string) string {
 	data := c.Param("data").MustGetString()
 	if data == "" {
 		return c.Param(param).GetString()

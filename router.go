@@ -6,8 +6,8 @@ package easyweb
 
 import (
 	"net/http"
-	"strings"
 	"path"
+	"strings"
 )
 
 type IRouter interface {

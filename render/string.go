@@ -5,9 +5,9 @@
 package render
 
 import (
-	"net/http"
 	"fmt"
 	"io"
+	"net/http"
 )
 
 var plainContentType = []string{"text/plain; charset=utf-8"}

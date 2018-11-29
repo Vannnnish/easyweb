@@ -5,16 +5,16 @@
 package easyweb
 
 import (
-	"sync"
-	"net/http"
 	"gitlab.yeeyuntech.com/yee/easyweb/render"
 	"log"
-	"os/signal"
-	"syscall"
-	"os"
-	"time"
+	"net/http"
 	"net/http/pprof"
+	"os"
+	"os/signal"
 	"strings"
+	"sync"
+	"syscall"
+	"time"
 )
 
 type (

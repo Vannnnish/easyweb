@@ -16,7 +16,7 @@ const (
 )
 
 const (
-	debugCode   = iota
+	debugCode = iota
 	releaseCode
 	testCode
 )
@@ -26,6 +26,7 @@ var modeName = DebugMode
 
 // 中间件logger的默认输出
 var DefaultWriter io.Writer = os.Stdout
+
 // 中间件recovery的默认输出
 var DefaultErrorWriter io.Writer = os.Stderr
 

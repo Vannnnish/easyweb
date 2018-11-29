@@ -5,9 +5,9 @@
 package easyweb
 
 import (
+	"net/url"
 	"strings"
 	"unicode"
-	"net/url"
 )
 
 // Param is a single URL parameter, consisting of a key and a value.

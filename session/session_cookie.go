@@ -6,12 +6,12 @@
 package session
 
 import (
-	"sync"
-	"net/http"
-	"crypto/cipher"
-	"net/url"
-	"encoding/json"
 	"crypto/aes"
+	"crypto/cipher"
+	"encoding/json"
+	"net/http"
+	"net/url"
+	"sync"
 )
 
 var cookiePder = &CookieProvider{}
@@ -56,11 +56,11 @@ func (st *CookieSessionStore) SessionRelease(w http.ResponseWriter) {
 		cookiePder.config.SecurityName, st.values)
 	if err == nil {
 		cookie := &http.Cookie{Name: cookiePder.config.CookieName,
-			Value: url.QueryEscape(encodedCookie),
-			Path: "/",
+			Value:    url.QueryEscape(encodedCookie),
+			Path:     "/",
 			HttpOnly: true,
-			Secure: cookiePder.config.Secure,
-			MaxAge: cookiePder.config.MaxAge}
+			Secure:   cookiePder.config.Secure,
+			MaxAge:   cookiePder.config.MaxAge}
 		http.SetCookie(w, cookie)
 	}
 }

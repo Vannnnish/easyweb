@@ -5,8 +5,8 @@
 package render
 
 import (
-	"net/http"
 	"encoding/json"
+	"net/http"
 )
 
 var jsonContentType = []string{"application/json; charset=utf-8"}

@@ -6,10 +6,10 @@
 package session
 
 import (
+	"container/list"
+	"net/http"
 	"sync"
 	"time"
-	"net/http"
-	"container/list"
 )
 
 var memPder = &MemProvider{list: list.New(), sessions: make(map[string]*list.Element)}
@@ -49,7 +49,7 @@ func (st *MemSessionStore) SessionID() string {
 	return st.sid
 }
 
-func (st *MemSessionStore) SessionRelease(w http.ResponseWriter) () {
+func (st *MemSessionStore) SessionRelease(w http.ResponseWriter) {
 
 }
 

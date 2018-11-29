@@ -5,12 +5,12 @@
 package binding
 
 import (
-	"net/http"
-	"sync"
 	"errors"
 	"fmt"
 	"gitlab.yeeyuntech.com/yee/easyweb/validation"
+	"net/http"
 	"strings"
+	"sync"
 )
 
 const (

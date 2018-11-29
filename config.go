@@ -16,8 +16,8 @@ var Config config = config{
 type config struct {
 	Mode        string `json:"mode"`        // 运行模式  debug / release / test 默认:debug
 	TemplateDir string `json:"templateDir"` // 模板文件路径 默认:view
-	Pprof       bool `json:"pprof"`         // 是否开启pprof 默认:false
-	SessionOn   bool `json:"sessionOn"`     // 是否开启session 默认：false
+	Pprof       bool   `json:"pprof"`       // 是否开启pprof 默认:false
+	SessionOn   bool   `json:"sessionOn"`   // 是否开启session 默认：false
 	Port        string `json:"port"`        // 运行端口 默认:8080
 }
 

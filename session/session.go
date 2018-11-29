@@ -5,12 +5,12 @@
 package session
 
 import (
-	"net/http"
+	"crypto/rand"
+	"encoding/hex"
 	"fmt"
+	"net/http"
 	"net/textproto"
 	"net/url"
-	"encoding/hex"
-	"crypto/rand"
 	"time"
 )
 
@@ -59,9 +59,9 @@ func Register(name string, provide Provider) {
 // session配置
 type ManagerConfig struct {
 	CookieName              string `json:"cookieName"`              // 一般以cookie实现，前台cookie名称
-	GcLifeTime              int64 `json:"gcLifeTime"`               // gc时间
-	MaxLifeTime             int64 `json:"maxLifeTime"`              // 后台session最大时间
-	CookieLifeTime          int `json:"cookieLifeTime"`             // 前台cookie生命周期
+	GcLifeTime              int64  `json:"gcLifeTime"`              // gc时间
+	MaxLifeTime             int64  `json:"maxLifeTime"`             // 后台session最大时间
+	CookieLifeTime          int    `json:"cookieLifeTime"`          // 前台cookie生命周期
 	ProviderConfig          string `json:"providerConfig"`          //
 	SessionIDLength         int64  `json:"sessionIDLength"`         //
 	SessionNameInHTTPHeader string `json:"sessionNameInHttpHeader"` // session在header中的名称
@@ -184,10 +184,10 @@ func (manager *Manager) SessionDestroy(w http.ResponseWriter, r *http.Request) {
 	manager.provider.SessionDestroy(sid)
 	expiration := time.Now()
 	cookie = &http.Cookie{Name: manager.config.CookieName,
-		Path: "/",
+		Path:     "/",
 		HttpOnly: true,
-		Expires: expiration,
-		MaxAge: -1}
+		Expires:  expiration,
+		MaxAge:   -1}
 	http.SetCookie(w, cookie)
 }
 

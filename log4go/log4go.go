@@ -67,7 +67,7 @@ const (
 type Level int
 
 const (
-	FINEST   Level = iota
+	FINEST Level = iota
 	FINE
 	DEBUG
 	TRACE

@@ -5,19 +5,19 @@
 package render
 
 import (
-	"net/http"
 	"bytes"
-	"html/template"
-	"sync"
-	"strings"
-	"path/filepath"
-	"os"
-	"io/ioutil"
-	"regexp"
-	"fmt"
-	"github.com/yeeyuntech/yeego/yeeStrings"
-	"github.com/yeeyuntech/yeego/yeeFile"
 	"errors"
+	"fmt"
+	"github.com/yeeyuntech/yeego/yeeFile"
+	"github.com/yeeyuntech/yeego/yeeStrings"
+	"html/template"
+	"io/ioutil"
+	"net/http"
+	"os"
+	"path/filepath"
+	"regexp"
+	"strings"
+	"sync"
 )
 
 var htmlContentType = []string{"text/html; charset=utf-8"}

@@ -6,20 +6,20 @@
 package session
 
 import (
-	"encoding/gob"
-	"encoding/base64"
 	"bytes"
-	"time"
-	"crypto/rand"
-	r "math/rand"
-	"io"
 	"crypto/cipher"
-	"errors"
 	"crypto/hmac"
+	"crypto/rand"
 	"crypto/sha1"
 	"crypto/subtle"
+	"encoding/base64"
+	"encoding/gob"
+	"errors"
 	"fmt"
+	"io"
+	r "math/rand"
 	"strconv"
+	"time"
 )
 
 func init() {

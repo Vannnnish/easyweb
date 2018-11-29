@@ -6,8 +6,8 @@
 package easyweb
 
 import (
-	"sync"
 	"net/http"
+	"sync"
 )
 
 type customHTTPHandler struct {

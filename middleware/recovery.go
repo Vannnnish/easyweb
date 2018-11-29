@@ -6,14 +6,14 @@
 package middleware
 
 import (
-	"io"
-	"gitlab.yeeyuntech.com/yee/easyweb"
-	"log"
 	"bytes"
-	"runtime"
 	"fmt"
+	"gitlab.yeeyuntech.com/yee/easyweb"
+	"io"
 	"io/ioutil"
+	"log"
 	"net/http/httputil"
+	"runtime"
 )
 
 var (
