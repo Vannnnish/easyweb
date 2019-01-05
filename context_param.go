@@ -6,11 +6,11 @@ package easyweb
 
 import (
 	"errors"
+	"github.com/Vannnnish/yeego/yeeCrypto/aes"
+	"github.com/Vannnnish/yeego/yeeCrypto/rsa"
+	"github.com/Vannnnish/yeego/yeeStrconv"
 	"github.com/buger/jsonparser"
 	"github.com/spf13/cast"
-	"github.com/yeeyuntech/yeego/yeeCrypto/aes"
-	"github.com/yeeyuntech/yeego/yeeCrypto/rsa"
-	"github.com/yeeyuntech/yeego/yeeStrconv"
 	"strconv"
 )
 

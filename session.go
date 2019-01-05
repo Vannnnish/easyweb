@@ -5,7 +5,7 @@
 
 package easyweb
 
-import "gitlab.yeeyuntech.com/yee/easyweb/session"
+import "easyweb/session"
 
 var (
 	globalSessions         *session.Manager

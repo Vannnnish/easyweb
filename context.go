@@ -5,15 +5,15 @@
 package easyweb
 
 import (
+	"easyweb/binding"
+	"easyweb/render"
+	"easyweb/session"
+	"easyweb/validation"
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/Vannnnish/yeego/yeeCrypto/aes"
 	"github.com/nicksnyder/go-i18n/i18n"
-	"github.com/yeeyuntech/yeego/yeeCrypto/aes"
-	"gitlab.yeeyuntech.com/yee/easyweb/binding"
-	"gitlab.yeeyuntech.com/yee/easyweb/render"
-	"gitlab.yeeyuntech.com/yee/easyweb/session"
-	"gitlab.yeeyuntech.com/yee/easyweb/validation"
 	"io"
 	"io/ioutil"
 	"math"

@@ -5,9 +5,9 @@
 package binding
 
 import (
+	"easyweb/validation"
 	"errors"
 	"fmt"
-	"gitlab.yeeyuntech.com/yee/easyweb/validation"
 	"net/http"
 	"strings"
 	"sync"

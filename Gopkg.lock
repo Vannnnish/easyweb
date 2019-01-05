@@ -49,7 +49,7 @@
 [[projects]]
   branch = "master"
   digest = "1:c26dea912ada9fa1f5083af85926b5292597178619ddff1ca2e82104afd0ce36"
-  name = "github.com/yeeyuntech/yeego"
+  name = "github.com/Vannnnish/yeego"
   packages = [
     "yeeCrypto/aes",
     "yeeCrypto/rsa",
@@ -84,11 +84,11 @@
     "github.com/mattn/go-isatty",
     "github.com/nicksnyder/go-i18n/i18n",
     "github.com/spf13/cast",
-    "github.com/yeeyuntech/yeego/yeeCrypto/aes",
-    "github.com/yeeyuntech/yeego/yeeCrypto/rsa",
-    "github.com/yeeyuntech/yeego/yeeFile",
-    "github.com/yeeyuntech/yeego/yeeStrconv",
-    "github.com/yeeyuntech/yeego/yeeStrings",
+    "github.com/Vannnnish/yeego/yeeCrypto/aes",
+    "github.com/Vannnnish/yeego/yeeCrypto/rsa",
+    "github.com/Vannnnish/yeego/yeeFile",
+    "github.com/Vannnnish/yeego/yeeStrconv",
+    "github.com/Vannnnish/yeego/yeeStrings",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1

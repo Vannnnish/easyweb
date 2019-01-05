@@ -6,8 +6,8 @@ web框架
 
 ```go
 import(
-	"gitlab.yeeyuntech.com/yee/easyweb"
-	"gitlab.yeeyuntech.com/yee/easyweb/middleware"
+	"easyweb"
+	"easyweb/middleware"
 )
 
 web := easyweb.New()
