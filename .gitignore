@@ -9,8 +9,6 @@
 
 # Test binary, build with `go test -c`
 *.test
- /.idea
- .idea
 
 
 # Output of the go coverage tool, specifically when used with LiteIDE
@@ -18,3 +16,4 @@
 
 .DS_Store
 vendor
+.idea/
