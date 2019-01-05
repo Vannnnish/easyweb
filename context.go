@@ -12,7 +12,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/Vannnnish/yeego/yeeCrypto/aes"
+	"github.com/vannnnish/yeego/yeeCrypto/aes"
 	"github.com/nicksnyder/go-i18n/i18n"
 	"io"
 	"io/ioutil"

@@ -6,7 +6,7 @@
 package easyweb
 
 import (
-	"github.com/Vannnnish/yeego/yeeFile"
+	"github.com/vannnnish/yeego/yeeFile"
 	l4g "easyweb/log4go"
 	"os"
 )
