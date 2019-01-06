@@ -7,7 +7,7 @@ package middleware
 import (
 	"fmt"
 	"github.com/mattn/go-isatty"
-	"easyweb"
+	"github.com/vannnnish/easyweb"
 	"io"
 	"os"
 	"strings"

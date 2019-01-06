@@ -6,7 +6,7 @@
 package middleware
 
 import (
-	"easyweb"
+	"github.com/vannnnish/easyweb"
 	"strings"
 )
 

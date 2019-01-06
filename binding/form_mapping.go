@@ -22,7 +22,7 @@ func mapForm(ptr interface{}, form map[string][]string) error {
 		valueFieldKind := valueField.Kind()         // 获取字段kind
 		inputFieldName := typeField.Tag.Get("form") // 根据tag获取输入的参数
 		if inputFieldName == "" {
-			inputFieldName = typeField.Name       // 如果为空，则直接设置为struct的属性键值
+			inputFieldName = typeField.Name // 如果为空，则直接设置为struct的属性键值
 			if valueFieldKind == reflect.Struct { // 判断该字段是否为Struct，如果是则递归解析
 				err := mapForm(valueField.Addr().Interface(), form)
 				if err != nil {

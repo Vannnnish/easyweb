@@ -8,7 +8,7 @@ package middleware
 import (
 	"bytes"
 	"fmt"
-	"easyweb"
+	"github.com/vannnnish/easyweb"
 	"io"
 	"io/ioutil"
 	"log"

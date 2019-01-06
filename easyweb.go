@@ -5,7 +5,7 @@
 package easyweb
 
 import (
-	"easyweb/render"
+	"github.com/vannnnish/easyweb/render"
 	"log"
 	"net/http"
 	"net/http/pprof"
