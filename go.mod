@@ -7,5 +7,5 @@ require (
 	github.com/mattn/go-isatty v0.0.4
 	github.com/nicksnyder/go-i18n v1.10.0
 	github.com/spf13/cast v1.3.0
-	github.com/vannnnish/yeego v0.0.0-20190106061508-9cdbdf9f391b
+	github.com/vannnnish/yeego v0.0.0-20190107033809-cde8d960fe5c
 )
