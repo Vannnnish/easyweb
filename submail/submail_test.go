@@ -22,9 +22,9 @@ func TestVerifyInternationalPhoneNumber(t *testing.T) {
 }
 
 func TestSendSmsCode(t *testing.T) {
-	yeego.MustInitConfig("/Users/angelina/Workspace/x-market/src/x-market_app/conf", "conf")
+	yeego.MustInitConfig("../conf", "conf")
 	easyweb.Logger = log4go.NewDefaultLogger(log4go.ERROR)
-	err := SendSmsCode(ProjectIdRegister, "86", "15008477531", "123456")
+	err := SendSmsCode(ProjectIdRegister, "86", "17318070950", "123456")
 	if err != nil {
 		panic(err.Error())
 	}

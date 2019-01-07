@@ -25,17 +25,17 @@ const (
 	ProjectIdPreRegister     = "pre_register"
 
 	// 中文
-	projectIdRegisterCn        = "rYgQq"  // 注册
-	projectIdForgetPasswordCn  = "wUWyR1" // 忘记密码
-	projectIdBindPhoneNumberCn = "62YYx"  // 绑定手机
-	projectIdLoginOrRegisterCn = "xT8MM1" // 登录
-	projectIdPreRegisterCn     = "hO84f3" // 预注册
+	projectIdRegisterCn        = "ij8cl3" // 注册
+	projectIdForgetPasswordCn  = "ij8cl3" // 忘记密码
+	projectIdBindPhoneNumberCn = "ij8cl3"  // 绑定手机
+	projectIdLoginOrRegisterCn = "ij8cl3" // 登录
+	projectIdPreRegisterCn     = "ij8cl3" // 预注册
 	// 英文
-	projectIdRegisterEn        = "GgX7Z4"
-	projectIdForgetPasswordEn  = "dXZ1R4"
-	projectIdBindPhoneNumberEn = "VaXnD2"
-	projectIdLoginOrRegisterEn = "vzJS43"
-	projectIdPreRegisterEn     = "SFxX11"
+	projectIdRegisterEn        = "ij8cl3"
+	projectIdForgetPasswordEn  = "ij8cl3"
+	projectIdBindPhoneNumberEn = "ij8cl3"
+	projectIdLoginOrRegisterEn = "ij8cl3"
+	projectIdPreRegisterEn     = "ij8cl3"
 )
 
 func SendSmsCode(project, areaCode, phoneNum, code string) error {
