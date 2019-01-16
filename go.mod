@@ -8,5 +8,7 @@ require (
 	github.com/nicksnyder/go-i18n v1.10.0
 	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/cast v1.3.0
-	github.com/vannnnish/yeego v0.0.0-20190116130032-bb3d55c3d688
+	github.com/vannnnish/yeego v0.0.0-20190116165236-9af39591b5ea
 )
+
+replace gopkg.in/russross/blackfriday.v2 v2.0.1 => github.com/russross/blackfriday/v2 v2.0.1
