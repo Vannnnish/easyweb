@@ -8,8 +8,8 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/vannnnish/yeego/yeeFile"
-	"github.com/vannnnish/yeego/yeeStrings"
+	"github.com/vannnnish/yeego/yeefile"
+	"github.com/vannnnish/yeego/yeestrings"
 	"html/template"
 	"io/ioutil"
 	"net/http"
@@ -137,7 +137,7 @@ func BuildTemplate(dir string, files ...string) error {
 	buildAllFiles := len(files) == 0
 	for _, v := range self.files {
 		for _, file := range v {
-			if buildAllFiles || yeeStrings.IsInSlice(files, file) {
+			if buildAllFiles || yeestrings.IsInSlice(files, file) {
 				templatesLock.Lock()
 				ext := filepath.Ext(file)
 				var t *template.Template
@@ -165,7 +165,7 @@ func getTplDeep(root, file, parent string, t *template.Template) (*template.Temp
 	} else {
 		fileAbsPath = filepath.Join(root, file)
 	}
-	if e := yeeFile.FileExists(fileAbsPath); !e {
+	if e := yeefile.FileExists(fileAbsPath); !e {
 		panic("can't find template file:" + file)
 	}
 	data, err := ioutil.ReadFile(fileAbsPath)

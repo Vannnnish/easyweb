@@ -11,7 +11,7 @@ import (
 	"errors"
 	"github.com/vannnnish/easyweb"
 	"github.com/vannnnish/yeego"
-	"github.com/vannnnish/yeego/third/yeeSubmail"
+	"github.com/vannnnish/yeego/yeethird/submail"
 	"io/ioutil"
 	"net/http"
 )
@@ -27,7 +27,7 @@ const (
 	// 中文
 	projectIdRegisterCn        = "ij8cl3" // 注册
 	projectIdForgetPasswordCn  = "ij8cl3" // 忘记密码
-	projectIdBindPhoneNumberCn = "ij8cl3"  // 绑定手机
+	projectIdBindPhoneNumberCn = "ij8cl3" // 绑定手机
 	projectIdLoginOrRegisterCn = "ij8cl3" // 登录
 	projectIdPreRegisterCn     = "ij8cl3" // 预注册
 	// 英文
@@ -42,25 +42,25 @@ func SendSmsCode(project, areaCode, phoneNum, code string) error {
 	projectId := judgeProjectIdByProjectAndAreaCode(project, areaCode)
 	var result string
 	if areaCode == "86" {
-		config := yeeSubmail.Config{
+		config := submail.Config{
 			AppId:    yeego.Config.GetString("submail.AppId"),
 			AppKey:   yeego.Config.GetString("submail.AppKey"),
 			SignType: "md5",
 		}
-		mXSend := yeeSubmail.CreateMessageXSend(phoneNum, projectId)
+		mXSend := submail.CreateMessageXSend(phoneNum, projectId)
 		mXSend.AddVar("code", code)
 		result = mXSend.Run(config)
 	} else {
-		config := yeeSubmail.Config{
+		config := submail.Config{
 			AppId:    yeego.Config.GetString("submail.InternationalAppId"),
 			AppKey:   yeego.Config.GetString("submail.InternationalAppKey"),
 			SignType: "md5",
 		}
-		mXSend := yeeSubmail.CreateMessageXSend("+"+areaCode+phoneNum, projectId)
+		mXSend := submail.CreateMessageXSend("+"+areaCode+phoneNum, projectId)
 		mXSend.AddVar("code", code)
 		result = mXSend.RunInternational(config)
 	}
-	res := &yeeSubmail.SubmailResponse{}
+	res := &submail.SubmailResponse{}
 	if err := json.Unmarshal([]byte(result), res); err != nil {
 		easyweb.Logger.Error(result)
 		return err

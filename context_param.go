@@ -8,9 +8,9 @@ import (
 	"errors"
 	"github.com/buger/jsonparser"
 	"github.com/spf13/cast"
-	"github.com/vannnnish/yeego/yeeCrypto/aes"
-	"github.com/vannnnish/yeego/yeeCrypto/rsa"
-	"github.com/vannnnish/yeego/yeeStrconv"
+	"github.com/vannnnish/yeego/yeecrypto/aes"
+	"github.com/vannnnish/yeego/yeecrypto/rsa"
+	"github.com/vannnnish/yeego/yeestrconv"
 	"strconv"
 )
 
@@ -53,7 +53,7 @@ func (c *Context) SetDefault(val string) *Context {
 
 func (c *Context) SetDefaultInt(i int) *Context {
 	if len(c.nowParam.Value) == 0 {
-		c.nowParam.Value = yeeStrconv.FormatInt(i)
+		c.nowParam.Value = yeestrconv.FormatInt(i)
 	}
 	return c
 }
@@ -412,7 +412,7 @@ func (c *Context) AesGetFloat(param string) float64 {
 		if err != nil {
 			return 0
 		}
-		f, err := yeeStrconv.ParseFloat64(fStr)
+		f, err := yeestrconv.ParseFloat64(fStr)
 		if err != nil {
 			return 0
 		}
@@ -442,7 +442,7 @@ func (c *Context) AesMustGetFloatWithError(param, errStr string) float64 {
 			}
 			return 0
 		}
-		f, err := yeeStrconv.ParseFloat64(fStr)
+		f, err := yeestrconv.ParseFloat64(fStr)
 		if err != nil {
 			if !c.validation.HasErrors() {
 				c.validation.SetError(param, errStr)

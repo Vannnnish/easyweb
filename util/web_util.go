@@ -10,8 +10,8 @@ package util
 import (
 	"errors"
 	"github.com/vannnnish/easyweb/submail"
-	"github.com/vannnnish/yeego/yeeStrconv"
-	"github.com/vannnnish/yeego/yeeStrings"
+	"github.com/vannnnish/yeego/yeestrconv"
+	"github.com/vannnnish/yeego/yeestrings"
 	"regexp"
 	"strings"
 )
@@ -29,14 +29,14 @@ var areaCodeArr = []string{"93", "355", "213", "684", "376", "244", "1264", "126
 // 验证区号
 func ValidAreaCode(areaCode string) bool {
 	areaCode = FormatAreaCode(areaCode)
-	return yeeStrings.IsInSlice(areaCodeArr, areaCode)
+	return yeestrings.IsInSlice(areaCodeArr, areaCode)
 }
 
 var lanArr = []string{"zh-cn", "en-us"}
 
 // 验证语言环境
 func ValidLanguage(lan string) bool {
-	return yeeStrings.IsInSlice(lanArr, lan)
+	return yeestrings.IsInSlice(lanArr, lan)
 }
 
 var emailPattern = regexp.MustCompile("[\\w!#$%&'*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[a-zA-Z0-9](?:[\\w-]*[\\w])?")
@@ -66,7 +66,7 @@ func ValidPhoneNumber(areaCode, phoneNumber string) (bool, error) {
 	if res.Status == "success" {
 		return true, nil
 	}
-	return false, errors.New(yeeStrconv.FormatInt(res.Code) + " : " + res.Msg)
+	return false, errors.New(yeestrconv.FormatInt(res.Code) + " : " + res.Msg)
 }
 
 // 验证邮箱格式

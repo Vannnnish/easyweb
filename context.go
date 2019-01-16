@@ -13,7 +13,7 @@ import (
 	"github.com/vannnnish/easyweb/render"
 	"github.com/vannnnish/easyweb/session"
 	"github.com/vannnnish/easyweb/validation"
-	"github.com/vannnnish/yeego/yeeCrypto/aes"
+	"github.com/vannnnish/yeego/yeecrypto/aes"
 	"io"
 	"io/ioutil"
 	"math"
