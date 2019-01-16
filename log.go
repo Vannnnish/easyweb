@@ -7,7 +7,7 @@ package easyweb
 
 import (
 	l4g "github.com/vannnnish/easyweb/log4go"
-	"github.com/vannnnish/yeego/yeeFile"
+	"github.com/vannnnish/yeego/yeefile"
 	"os"
 )
 
@@ -27,7 +27,7 @@ func defaultRecoveryWriter() {
 	if IsDebugging() {
 		RecoveryLogger.AddFilter("stdout_recovery", l4g.ERROR, l4g.NewConsoleLogWriter())
 	} else {
-		err := yeeFile.MkdirForFile(recoveryLogFileName)
+		err := yeefile.MkdirForFile(recoveryLogFileName)
 		if err != nil {
 			panic("can not create file dir " + recoveryLogFileName)
 		}
@@ -48,7 +48,7 @@ func defaultLogger() {
 	if IsDebugging() {
 		Logger.AddFilter("stdout", l4g.DEBUG, l4g.NewConsoleLogWriter())
 	} else {
-		err := yeeFile.MkdirForFile(defaultLogFileName)
+		err := yeefile.MkdirForFile(defaultLogFileName)
 		if err != nil {
 			panic("can not create file dir " + defaultLogFileName)
 		}
